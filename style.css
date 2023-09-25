@@ -1,0 +1,46 @@
+body{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.644);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #F65101;
+    padding: 0 1em;
+    height: 10s0px;
+}
+.main__logo-name{
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.main__logo-img {
+    width: 100px;
+}
+a {
+    color: rgb(255, 255, 255);
+}
+
+.main__links a {
+    padding: 15px 10px;
+}
+.main__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.table__element-1{
+    background-color: rgb(250, 195, 127);
+}
+.table__element-2{
+    background-color: #b6b6b6;
+}
+.footer{
+    background-color: #F65101;
+    text-align: center;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}

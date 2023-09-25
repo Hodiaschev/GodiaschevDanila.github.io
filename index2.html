@@ -1,0 +1,197 @@
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__logo">
+                    <img src="logo.jpg" class="main__logo-img" alt="#">
+                    <div class="main__logo-name">
+                        <h2><p>Virtus Pro</p></h2>
+                    </div>
+                </div>
+                <div class="main__links">
+                    <a href="https://virtus.pro">Главная</a>
+                    <a href="https://vk.com/mood_danil">О нас</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="container">
+        <nav class="navigation">
+            <div class="navigation_links">
+                <h2>Гиперссылки</h2>
+                <ul>
+                    <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+                    <li><a href="https://kubsu.ru">абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https</a></li>
+                    <li><a href="https://kubsu.ru"><img src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png"></a></li>
+                    <li><a href="https://kubsu.ru">сокращенную ссылку на внутреннюю страницу</a></li>
+                    <li><a href="/index.html">сокращенную ссылку на главную страницу</a></li>
+                    <li><a href="https://kubsu.ru">ссылку на фрагмент текущей страницы</a></li>
+                    <li><a href="https://kubsu.ru?param1=1&param2=2&param3=3">ссылку c тремя параметрами в URL</a></li>
+                    <li><a href="#form">С параметром id</a></li>
+                    <li><a href="/">относительную на страницу в текущем каталоге</a></li>
+                    <li><a href="/about">относительную на страницу в каталоге about</a></li>
+                    <li><a href="./about">относительную на страницу в каталоге уровнем выше текущего</a></li>
+
+                    <li><a href="../about">относительную на страницу в каталоге двумя уровнями выше</a></li>
+                    <li><a href="https://kubsu.ru">контекстную в тексте абзаца</a></li>
+                    <li><a href="https://kubsu.ru">ссылку на фрагмент страницы стороннего сайта</a></li>
+                    <li><map name="clickable">
+                        <area shape="circle" coords="309,164,60" href="https://yobte.ru/uploads/posts/2019-11/devushki-s-estestvennoj-krasotoj-115-foto-13.jpg">
+                        <area shape="rect" coords="185,225,268,352" href="https://prosto-post.ru/wp-content/uploads/2023/08/knigi-knizhki-znaniya-stol-stopka-shikarnye-folianty-starinnye-razmytost-boke-makro-oboi.jpg">
+                        </map>
+                        <img usemap="#clickable" src="https://avatars.mds.yandex.net/i?id=efad4e01e47e7fcbe41b4fc59b65e447b240019d-9095316-images-thumbs&n=13" alt="picture" width="500px" height="300px"></li>
+                    <li><a href="">ссылку с пустым href</a></li>
+
+                    <li><a>ссылку без href</a></li>
+                    <li><a href="https://kubsu.ru">ссылку, по которой запрещен переход поисковикам</a></li>
+                    <li><a href="https://kubsu.ru">запрещенную для индексации поисковиками</a></li>
+
+                    <li><h3>Нумерованный список ссылок c подписями title</h3>
+                    <ol>
+                        <li>Первый пункт</li>
+                        <li>Второй пункт</li>
+                        <li>Третий пункт</li>
+                    </ol>
+                    </li>
+                    <li><a href="/form.html">ссылку на файл на сервере FTP c авторизацией</a></li>
+                    <li><a href="model.html">Форма</a></li>
+                </ul>
+            </div>
+        </nav>
+            <head>
+                <title>Таблица</title>
+                <h2>Расписание поездов</h2>
+            </head>
+        
+          <body>
+                <table>
+                <tr class="table__element table__element-1">
+                    <th>Маршрут</th>
+                    <th>Время отправления</th>
+                    <th>Время прибытия</th>
+                    <th>Пирон</th>
+                </tr>
+                <tr class="table__element table__element-2">
+                    <td>Краснодар-Москва</td>
+                    <td>12:00</td>
+                    <td>10:00</td>
+                    <td>7</td>
+                </tr>
+                <tr class="table__element table__element-1">
+                    <td>Краснодар-Ростов-на-Дону</td>
+                    <td>14:00</td>
+                    <td>17:30</td>
+                    <td>2</td>
+                </tr>
+                <tr tr class="table__element table__element-2">
+                    <td>Краснодар-Санкт-Петербург</td>
+                    <td colspan="2">18:00</td>
+                    <td>8</td>
+                </tr>
+            
+                </table>
+        
+          </body>
+    </div>
+
+    <div class="forma">
+        <p><h2>Форма</h2></p>
+        <p>
+            <form action="#"
+            method="POST">
+        
+            <label>
+                ФИО:<br />
+                <input required name="field-name-1" placeholder="ФИО" />
+            </label><br />
+        
+            <label>
+                Номер телефона:<br />
+                <input required type="tel" name="field-name-1" placeholder="Номер телефона" />
+            </label><br />
+        
+            <label>
+                Текстовое поле email:<br />
+                <input required name="field-email"
+                type="email"
+                placeholder="Введите вашу почту" />
+            </label><br />
+        
+            <label>
+                Текстовое поле даты:<br />
+                <input name="field-date"
+                value="2019-08-13"
+                type="date" />
+            </label><br />
+        
+            Ваш пол:<br />
+            <label><input type="radio" checked="checked"
+                name="radio-group-1" value="Значение1" />
+                Мужской</label>
+            <label><input type="radio"
+                name="radio-group-1" value="Значение2" />
+                Женский</label>
+                <br />
+        
+                    <label>
+                Список языков:<br />
+                <select name="field-name-3">
+                <option value="Значение1">Pascal</option>
+                <option value="Значение2" selected="selected">С</option>
+                <option value="Значение3">С++</option>
+                </select>
+            </label><br />
+        
+            <label>
+                Список языков (listbox с множественным выбором):
+                <br />
+                <select name="field-name-4[]" multiple="multiple">
+                <option value="Значение1">Pascal</option>
+                <option value="Значение2" selected="selected">С</option>
+                <option value="Значение3" selected="selected">С++</option>
+                </select>
+            </label><br />
+        
+            <label>
+                Многострочное текстовое поле:<br />
+                <textarea name="field-name-2">начальное значение</textarea>
+            </label><br />
+        
+        
+        
+        
+            Чекбокс:<br />
+            <label><input type="checkbox" checked="checked"
+                name="check-1" />
+                С контрактом ознакомлен</label><br />
+        
+            Кнопка отправки формы,
+            при нажатии заполненные в форму данные
+            отправятся в формате urlencoded методом
+            POST или GET по адресу URL_отправки_данных:
+            <input type="submit" value="Отправить" />
+        </p>
+        </form>
+      </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>
+                Правила обработки персональных данных и политика конфиденциальности сайта Virtus.pro
+                © 2003 — 2023 VIRTUS.PRO При копировании материалов активная ссылка на сайт обязательна
+            </p>
+
+            
+        </div>
+       
+    </footer>
+
+</body>
+</html>
