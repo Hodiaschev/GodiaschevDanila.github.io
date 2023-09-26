@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form id="form" action="#">
-    <p><h2>Форма</h2></p>
-    <p>
-        <input type="text" name="name" placeholder="Имя"><Br>
-        <input type="tel" name="" placeholder="телефон"><Br>
-        <input type="email" name="" placeholder="e-mail"><br>
-        <input type="date" name="" value="дата рождения"><Br>
-        <br>
-        <h2>Пол </h2>
-        <input type="radio" name="sex" value="">Мужской<Br>
-        <input type="radio" name="sex" value="">Женский<Br>
-        <br>
-        <h2>Любимый язык программирования </h2>
-        <input type="checkbox" name="lang" value="">pascal<Br>
-        <input type="checkbox" name="lang" value="">C<Br>
-        <input type="checkbox" name="lang" value="">C++<Br>
-        <input type="checkbox" name="lang" value="">JS<Br>
-        <input type="checkbox" name="lang" value="">PHP<Br>
-        <input type="checkbox" name="lang" value="">Python<Br>
-        <input type="checkbox" name="lang" value="">Java<Br>
-        <br>
-        <input type="textarea" calss="bio" placeholder="Биография"><br>
+    <h1>Форма</h1>
 
-        <input type="checkbox" name="" value="">с контрактом ознакомлен(а)<Br>
-        
-        
-        <button><a href="/">Сохранить</a></button>
+    <div class="forma">
+    <form action="/"
+      method="POST">
 
-    <p>
-</form>
+      <label>
+        ФИО:<br />
+        <input name="field-name-1" placeholder="ФИО" required />
+      </label><br />
+
+      <label>
+        Номер телефона:<br />
+        <input type="tel" name="field-name-1" placeholder="Номер телефона" required/>
+      </label><br />
+
+      <label>
+        Текстовое поле email:<br />
+        <input name="field-email"
+          type="email"
+          placeholder="Введите вашу почту" required />
+      </label><br />
+
+      <label>
+        Текстовое поле даты:<br />
+        <input name="field-date"
+          value="2019-08-13"
+          type="date" required />
+      </label><br />
+
+    
+       
+        
+           Ваш пол:<br />
+      <label><input type="radio" 
+        name="radio-group-1" value="Значение1" required/>
+        Мужской</label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        Женский</label>
+        <br />
+        
+
+      
+  <input required type="checkbox" id="java" name="language" value="java">
+  <label for="java">Java</label><br>
+  <input type="checkbox" id="python" name="language" value="python">
+  <label for="python">Python</label><br>
+  <input type="checkbox" id="javascript" name="language" value="javascript">
+  <label for="javascript">JavaScript</label><br>
+  <input type="checkbox" id="csharp" name="language" value="csharp">
+  <label for="csharp">C#</label><br>
+ 
+      <label>
+        Многострочное текстовое поле:<br />
+        <textarea  name="field-name-2">начальное значение</textarea>
+      </label><br />
+
+
+
+
+      Чекбокс:<br />
+      <label><input required type="checkbox" 
+        name="check-1" />
+        С контрактом ознакомлен</label><br />
+
+      Кнопка отправки формы,
+      при нажатии заполненные в форму данные
+      отправятся в формате urlencoded методом
+      POST или GET по адресу URL_отправки_данных:
+      <input type="submit" value="Отправить" />
+    </form>
+
+    <h1><a href="index.html">Назад</a></h1>
+    
 </body>
 </html>
