@@ -1,0 +1,135 @@
+body{
+    font-family: 'Mooli', sans-serif;
+    color: white;
+    background-color: rgba(170, 170, 170, 0)!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+
+header{
+    background-color: #F65101;
+    padding: 0 1em;
+    height: 10s0px;
+}
+.main__logo-name{
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.tchk li{
+    list-style-type: none;
+}
+.nav{display: flex;
+    align-items: center;justify-content: space-between;
+    }
+    .nav-bar{    display: inline;
+    }
+    .navi{    border-radius: 50%;
+        width: 80px;    height: 70px;
+    }
+    .nav ul {
+        list-style-type: none;    margin: 0;
+        padding: 0;    overflow: hidden;
+    }
+    .nav li {    float: left;
+    }
+    .nav a {    display: block;
+        padding: 10px;    text-decoration: none;
+    }
+    .ul{
+        text-decoration: none;
+    }
+    .nav a:hover {    background-color: #ddd !important;
+    }
+.main__logo-img {
+    width: 100px;
+}
+.container {
+    margin: 0 auto;
+    /* align-items: center;
+    text-align: center;
+    justify-content: center; */
+}
+.forma{
+    margin: 0 auto;
+    /* align-items: center;
+    text-align: center;
+    justify-content: center; */
+}
+a {
+    color: rgb(255, 255, 255);
+}
+
+.main__links a {
+    padding: 15px 10px;
+}
+
+.main__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#main-aside-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+.table__element-1{
+    background-color: rgb(250, 195, 127);
+}
+.table__element-2{
+    background-color: #b6b6b6 ;
+}
+.footer{
+    background-color: #F65101 ;
+    text-align: center;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+.abc{
+    display: flex;
+    flex-direction: column;
+}
+.tablica {
+    order: 0;
+}
+
+@media (min-device-width: 0px) and (max-device-width: 700px) {
+    #main-aside-wrapper {
+      flex-direction: column;
+    }
+    .main__wrapper {
+        display: block;
+        justify-content: space-between;
+    }
+    body{
+        max-width: 1170;
+        font-size: 10PX;
+        
+    }
+    .container {
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .forma{
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .tablica{
+        order: -1;
+    }
+.nav{
+    display: block;
+}
+
+.nav li{
+    float: none;
+}
+  }
+
