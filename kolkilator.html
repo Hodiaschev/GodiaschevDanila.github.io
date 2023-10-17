@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+    }
+    .wrapper {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    #result {
+      margin-top: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+    .knopka{
+        width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Калькулятор стоимости товара</h1>
+    <form>
+        <input name="field1" type="number" placeholder="Введите кол-во товаров">
+        <select name="select1">
+        <option value="50">Товар 1</option>
+        <option value="60">Товар 2</option>
+        <option value="70">Товар 3</option>
+        <option value="80">Товар 4</option>
+      </select>
+      <button id="button1" onclick="return click1();" class = "knopka" >Рассчитать</button>
+      <div id="result">Итог: </div>
+    </form>
+  </div>
+  
+
+  <script type="text/javascript">
+    function click1() {
+        let numProduct = document.getElementsByName("field1")[0].value;
+        if (numProduct<0){
+            numProduct = -numProduct;
+        }
+      let r = document.getElementById("result");
+      let s = document.getElementsByName("select1");
+      r.innerHTML = "Итоговая стоимость: " + numProduct * parseInt(s[0].value);
+      console.log(s[0].value);
+      return false;
+    }
+  </script>
+</body>
+</html>
