@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+    }
+    .wrapper {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+    #result {
+      margin-top: 10px;
+    }
+    input {
+      margin: 5px 0;
+    }
+    #myradios {
+      display: none;
+    }
+    #checkbox_block {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form>
+        <h1>Калькулятор стоимости товара</h1>
+
+          <input name="field1" type="number" placeholder="Введите кол-во товаров">
+          <select name="myselect">
+    <option value="50">Брус берёзовый</option>
+    <option value="60">Брус осиновый</option>
+    <option value="70">Брус дубовый</option>
+  </select>
+          <button id="button1" onclick="return calc();">Посчитать</button>
+
+          <div class="myradios" id="myradios">
+    <label><input type="radio" name="myradio" value="50">50</label>
+    <label><input type="radio" name="myradio" value="60">60</label>
+    <label><input type="radio" name="myradio" value="70">70</label>
+  </div>  
+              <div id="checkbox_block">
+                <input type="checkbox" name="lang" id="checks" value="1">x3
+              </div>
+          <div id="result">Итоговая стоимость: </div>
+    </form>
+  </div>
+  
+
+  <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function (event) {
+  let s = document.getElementsByName("myselect");
+  s[0].addEventListener("change", function(event) {
+    let select = event.target;
+    let radios = document.getElementById("myradios");
+    let checkbox = document.getElementById("checkbox_block");
+    console.log(select.value);
+    // Можно использовать getElementsByClassName()
+    if (select.value == "60") {
+      radios.style.display = "block";
+    }
+    else {
+      radios.style.display = "none";
+    }
+    if (select.value == "70") {
+      checkbox_block.style.display = "block";
+    }
+    else {
+      checkbox_block.style.display = "none";
+    }
+  });
+  
+  let r = document.querySelectorAll(".myradios input[type=radio]");
+  r.forEach(function(radio) {
+    radio.addEventListener("change", function(event) {
+      let r = event.target;
+      console.log(r.value);
+    });    
+  });
+  
+});
+
+    function calc() {
+        let numProduct = document.getElementsByName("field1")[0].value;
+      let r = document.getElementById("result");
+      let s = document.getElementsByName("myselect");
+      console.log(numProduct);
+
+      let dopRadio = 0;
+
+      let radios = document.getElementById("myradios");
+      let checkbox = document.getElementById("checks");
+
+      if (numProduct < 0) {
+        numProduct = -numProduct;
+      }
+
+      var coffee = document.getElementsByName("myradio");
+      var i;
+      for (i = 0; i < coffee.length; i++) {
+          if (coffee[i].checked && parseInt(s[0].value) == 60) {
+              dopRadio = parseInt(coffee[i].value);
+          }
+      }
+
+        if (checkbox.checked && parseInt(s[0].value) == 70) {
+          numProduct *= 3;
+        }
+
+      r.innerHTML = "Итоговая стоимость: " + (numProduct * parseInt(s[0].value) + parseInt(dopRadio));
+      console.log(dopRadio);
+      console.log(s[0].value);
+      return false;
+    }
+
+  </script>
+</body>
+</html>
